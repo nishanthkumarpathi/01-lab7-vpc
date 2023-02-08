@@ -48,6 +48,29 @@ output "private_database_route_table_ids" {
   value       = module.vpc.database_route_table_ids
 }
 
+# VPC Database Subnet Group Name
+output "database_subnet_group_name" {
+  description = "Name of the database subnet group"
+  value       = module.vpc.database_subnet_group_name
+}
+
+# VPC Database Subnets
+output "database_subnet_ids" {
+  description = "List of IDs of database subnets"
+  value       = module.vpc.database_subnet_group
+}
+
+# VPC Database Subnets
+output "database_subnets" {
+  description = "List of IDs of database subnets"
+  value       = module.vpc.database_subnets
+}
+
+# VPC Database database_subnets_cidr_blocks
+output "database_subnets_cidr_blocks" {
+  description = "List of CIDR blocks of database subnets"
+  value       = module.vpc.database_subnets_cidr_blocks
+}
 
 # VPC NAT gateway Public IP
 output "nat_public_ips" {
